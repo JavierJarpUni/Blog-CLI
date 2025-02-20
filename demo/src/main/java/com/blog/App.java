@@ -31,12 +31,15 @@ public class App
                     listPosts();
                     break;
                 case 3:
-                    updatePost();
+                    viewPost();
                     break;
                 case 4:
-                    removePost();
+                    updatePost();
                     break;
                 case 5:
+                    removePost();
+                    break;
+                case 6:
                     running = false;
                     System.out.println("Exiting Blog App...");
                     break;
@@ -46,13 +49,14 @@ public class App
         }
     }
     private static void printMenu() {
-        System.out.println("\nWelcome to the Blog App CLI!");
-        System.out.println("1. Create a new blog post");
-        System.out.println("2. List all blog posts");
-        System.out.println("3. Update a blog post");
-        System.out.println("4. Remove a blog post");
-        System.out.println("5. Exit");
-        System.out.print("Enter your choice: ");
+            System.out.println("\nWelcome to the Blog App CLI!");
+            System.out.println("1. Create a new blog post");
+            System.out.println("2. List all blog posts");
+            System.out.println("3. View a blog post");
+            System.out.println("4. Update a blog post");
+            System.out.println("5. Remove a blog post");
+            System.out.println("6. Exit");
+            System.out.print("Enter your choice: ");
     }
 
     private static int getUserChoice() {
@@ -103,6 +107,25 @@ public class App
 
             blogManager.updatePost(postId, newTitle, newContent);
             System.out.println("Blog post updated successfully!");
+        } else {
+            System.out.println("Post not found.");
+        }
+    }
+
+    private static void viewPost() {
+        System.out.print("Enter the ID of the post you want to view: ");
+        int postId = Integer.parseInt(scanner.nextLine());
+
+        BlogPost post = blogManager.getPost(postId);
+        if (post != null) {
+            System.out.println("\n--- Blog Post Details ---");
+            System.out.println("ID: " + post.getId());
+            System.out.println("Title: " + post.getTitle());
+            System.out.println("Content: " + post.getContent());
+            System.out.println("Author: " + post.getAuthor());
+            System.out.println("Created at: " + post.getCreatedAt());
+            System.out.println("Updated at: " + post.getUpdatedAt());
+            System.out.println("--------------------------");
         } else {
             System.out.println("Post not found.");
         }
