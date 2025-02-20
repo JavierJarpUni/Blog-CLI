@@ -1,0 +1,5 @@
+classes\BlogCLI.class
+classes\BlogPostFactory.class
+com\blog\App.class
+classes\BlogPost.class
+classes\BlogManager.class
