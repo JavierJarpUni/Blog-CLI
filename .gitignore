@@ -1,3 +1,75 @@
 .vscode
 
 .idea
+
+# ========================
+# Java - General
+# ========================
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# ========================
+# Maven
+# ========================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Maven test output
+surefire-reports/
+failsafe-reports/
+
+# ========================
+# Gradle (optional, future-proofing)
+# ========================
+.gradle/
+build/
+
+# ========================
+# IDEs
+# ------------------------
+# IntelliJ
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# ========================
+# OS and Editor Files
+# ========================
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*.tmp
+
+# ========================
+# Environment & Secrets
+# ========================
+.env
+*.env

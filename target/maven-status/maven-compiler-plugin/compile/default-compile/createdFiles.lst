@@ -1,0 +1,5 @@
+com/blog/App.class
+classes/BlogPost.class
+classes/BlogManager.class
+classes/BlogPostFactory.class
+classes/BlogManager$1.class
